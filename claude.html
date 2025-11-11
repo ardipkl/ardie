@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ardhitya Afif P - Profil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 30px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: bold;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header .zodiac {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .job-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .company {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .hobby-tag {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 48px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .section-title {
+                font-size: 1.3em;
+            }
+
+            .section-content {
+                font-size: 1em;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .header {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-img">AAP</div>
+            <h1>Ardhitya Afif P</h1>
+            <div class="zodiac">♌ Leo Man</div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">
+                    <span>💼</span> Profesi
+                </div>
+                <div class="section-content">
+                    <div class="job-title">Eksekutif dan EO Manager</div>
+                    <div class="company">PT XYZ</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <span>🎯</span> Tentang Saya
+                </div>
+                <div class="section-content">
+                    Seorang profesional dengan semangat Leo yang berapi-api, berdedikasi dalam mengelola acara dan operasional dengan penuh passion dan kreativitas.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <span>🎨</span> Hobi
+                </div>
+                <div class="section-content">
+                    <div class="hobby-tag">🔥 Memancing Keributan</div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-btn" onclick="showMessage('LinkedIn')">LinkedIn</a>
+                <a href="#" class="social-btn" onclick="showMessage('Instagram')">Instagram</a>
+                <a href="#" class="social-btn" onclick="showMessage('Email')">Email</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Ardhitya Afif P. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage(platform) {
+            alert('Terima kasih telah mengunjungi profil saya! Fitur ' + platform + ' akan segera tersedia.');
+        }
+
+        // Add smooth scroll effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateX(-30px)';
+                setTimeout(() => {
+                    section.style.transition = 'all 0.6s ease';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateX(0)';
+                }, index * 200);
+            });
+        });
+
+        // Interactive profile image
+        const profileImg = document.querySelector('.profile-img');
+        profileImg.addEventListener('click', function() {
+            this.style.transform = 'rotate(360deg) scale(1.1)';
+            this.style.transition = 'transform 0.6s ease';
+            setTimeout(() => {
+                this.style.transform = 'rotate(0deg) scale(1)';
+            }, 600);
+        });
+    </script>
+</body>
+</html>

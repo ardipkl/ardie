@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Ardhitya Afif P</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: #666;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .hobby-section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .toggle-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .toggle-btn:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Responsif */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .profile-card, .hobby-section {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                font-size: 40px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            .profile-image {
+                width: 100px;
+                height: 100px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-image">AAP</div> <!-- Placeholder untuk foto, inisial Ardhitya Afif P -->
+            <h1>Ardhitya Afif P</h1>
+            <p><strong>Jabatan:</strong> Leo Man Eksekutif dan EO Manager PT XYZ</p>
+            <p><strong>Hobi:</strong> Mendaki</p>
+        </div>
+        <div class="hobby-section">
+            <h2>Tentang Hobi Saya</h2>
+            <p id="hobby-detail" class="hidden">Sejak lama saya memiliki ketertarikan mendalam terhadap kegiatan alam bebas, khususnya mendaki gunung. Bagi saya, mendaki bukan sekadar olahraga, tetapi juga perjalanan untuk mengenal diri sendiri dan menguji ketangguhan mental. Dari setiap langkah di jalur pendakian, saya belajar tentang kesabaran, kerja sama, dan rasa syukur terhadap alam. Salah satu pencapaian yang paling membanggakan dalam hobi ini adalah berhasil menaklukkan Triple S  Gunung Slamet, Sindoro, dan Sumbing  yang menjadi simbol ketekunan dan semangat petualangan saya di dunia pendakian. </p>
+            <button class="toggle-btn" onclick="toggleHobby()">Tampilkan Detail Hobi</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleHobby() {
+            const detail = document.getElementById('hobby-detail');
+            const btn = document.querySelector('.toggle-btn');
+            if (detail.classList.contains('hidden')) {
+                detail.classList.remove('hidden');
+                btn.textContent = 'Sembunyikan Detail Hobi';
+            } else {
+                detail.classList.add('hidden');
+                btn.textContent = 'Tampilkan Detail Hobi';
+            }
+        }
+    </script>
+</body>
+</html>

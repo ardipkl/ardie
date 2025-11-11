@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Ardhitya Afif P</title>
+    
+    <style>
+        /* Styling Dasar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+            color: #212529;
+            line-height: 1.6;
+        }
+
+        /* Header dan Footer */
+        .header, .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1.2em 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-weight: 300;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        /* Card Profil */
+        .profile-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-header {
+            border-bottom: 2px solid #f8f9fa;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 5px solid #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        .profile-header h2 {
+            margin-top: 10px;
+            color: #007bff;
+        }
+
+        #status-message {
+            font-weight: bold;
+        }
+
+        .profile-details {
+            text-align: left;
+        }
+
+        .profile-details h3 {
+            color: #007bff;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            font-size: 1.3em;
+        }
+
+        .profile-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-details li {
+            margin-bottom: 10px;
+        }
+
+        /* Tombol */
+        #toggle-status-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        #toggle-status-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Responsivitas: Media Queries */
+        /* Untuk tablet dan desktop yang lebih besar (lebar > 768px) */
+        @media (min-width: 768px) {
+            .profile-card {
+                display: flex;
+                text-align: left;
+                padding: 50px;
+            }
+
+            .profile-header {
+                flex: 1;
+                padding-right: 40px;
+                border-right: 1px solid #dee2e6;
+                border-bottom: none;
+                text-align: center;
+            }
+
+            .profile-details {
+                flex: 2;
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Profil Saya</h1>
+    </header>
+
+    <main class="container">
+        <section class="profile-card">
+            <div class="profile-header">
+                <img src="placeholder.jpg" alt="Foto Profil Ardhitya Afif P" class="profile-image"> 
+                <h2>Ardhitya Afif P</h2>
+                <p>Leo Man Eksekutif</p>
+                <p id="status-message">Status: Aktif</p>
+            </div>
+
+            <div class="profile-details">
+                <h3>Informasi Pekerjaan 💼</h3>
+                <ul>
+                    <li>**Jabatan Utama:** Leo Man Eksekutif</li>
+                    <li>**Jabatan Tambahan:** EO Manager</li>
+                    <li>**Perusahaan:** PT XYZ</li>
+                </ul>
+
+                <h3>Hobi & Kegiatan 🏞️</h3>
+                <p>Hobi utama saya adalah **Mendaki**. Menjelajahi jalur pegunungan adalah cara terbaik untuk merelaksasi pikiran dan menjaga kebugaran, sebuah kontras yang baik dari kesibukan manajerial di PT XYZ.</p>
+
+                <h3>Tentang Saya</h3>
+                <p>Sebagai EO Manager, saya ahli dalam mengorganisir dan melaksanakan acara skala besar. Saya memiliki jiwa kepemimpinan yang kuat dan fokus pada pencapaian tujuan strategis perusahaan.</p>
+            </div>
+            
+            <button id="toggle-status-btn">Ubah Status</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Ardhitya Afif P - Web Responsif</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusMessage = document.getElementById('status-message');
+            const toggleButton = document.getElementById('toggle-status-btn');
+            let isOnline = true;
+
+            // Setel warna awal status
+            statusMessage.style.color = '#28a745'; // Hijau untuk Aktif
+
+            // Fungsi untuk mengubah status
+            function toggleStatus() {
+                if (isOnline) {
+                    statusMessage.textContent = 'Status: Sibuk';
+                    statusMessage.style.color = '#dc3545'; // Merah
+                    toggleButton.textContent = 'Set Status: Aktif';
+                    isOnline = false;
+                } else {
+                    statusMessage.textContent = 'Status: Aktif';
+                    statusMessage.style.color = '#28a745'; // Hijau
+                    toggleButton.textContent = 'Set Status: Sibuk';
+                    isOnline = true;
+                }
+            }
+
+            // Tambahkan event listener ke tombol
+            toggleButton.addEventListener('click', toggleStatus);
+        });
+    </script>
+</body>
+</html>

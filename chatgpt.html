@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Ardhitya Afif P</title>
+  <style>
+    /* ====== RESET & FONT ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      scroll-behavior: smooth;
+    }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      background: #00e1ff;
+      color: #1e1e2f;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #00aacc;
+    }
+
+    /* ====== CARD STYLE ====== */
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+      margin-bottom: 60px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #00e1ff;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    /* ====== BUTTON ====== */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #00e1ff;
+      color: #1e1e2f;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00aacc;
+    }
+
+    /* ====== LINK WEBSITE ====== */
+    .link-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .link-container a {
+      background: rgba(255, 255, 255, 0.15);
+      color: #00e1ff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      border: 1px solid #00e1ff;
+    }
+
+    .link-container a:hover {
+      background: #00e1ff;
+      color: #1e1e2f;
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .card {
+        padding: 25px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#hobi">Hobi</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <!-- ====== PROFIL ====== -->
+  <section id="profil" class="card">
+    <img src="https://via.placeholder.com/120" alt="Foto Profil" class="profile-img">
+    <h1>Ardhitya Afif P</h1>
+    <h2>seorang yang ingin berkelana </h2>
+    <p>Seorang profesional yang berdedikasi tinggi dalam dunia event organizer dan manajemen eksekutif. Memiliki semangat kepemimpinan ala Leo — penuh energi, percaya diri, dan visioner.</p>
+    <a href="#" class="btn" id="btn-halo">Sapa Saya</a>
+  </section>
+
+  <!-- ====== HOBI ====== -->
+  <section id="hobi" class="card">
+    <h1>Hobi Mendaki Gunung</h1>
+    <p>Sejak lama saya memiliki ketertarikan mendalam terhadap kegiatan alam bebas, khususnya mendaki gunung. Bagi saya, mendaki bukan sekadar olahraga, tetapi juga perjalanan untuk mengenal diri sendiri dan menguji ketangguhan mental. Dari setiap langkah di jalur pendakian, saya belajar tentang kesabaran, kerja sama, dan rasa syukur terhadap alam.</p>
+    <p>Salah satu pencapaian paling membanggakan adalah berhasil menaklukkan <strong>Triple S</strong> — Gunung Slamet, Sindoro, dan Sumbing — simbol ketekunan dan semangat petualangan saya di dunia pendakian.</p>
+  </section>
+
+  <!-- ====== KONTAK ====== -->
+  <section id="kontak" class="card">
+    <h1>Kontak</h1>
+    <p>Ingin berkenalan lebih dekat atau berdiskusi seputar event dan pendakian?</p>
+    <p><strong>kontak:</strong>085894128987</p>
+    <p><strong>Instagram:</strong> @ardhityapgst</p>
+
+    <!-- ====== TOMBOL LINK WEBSITE ====== -->
+    <div class="link-container">
+      <a href="blackbox.html" target="_blank">Link 1</a>
+      <a href="claude.html" target="_blank">Link 2</a>
+      <a href="gemini.html" target="_blank">Link 3</a>
+    </div>
+  </section>
+
+  <script>
+    // Tombol sapaan
+    document.getElementById("btn-halo").addEventListener("click", function() {
+      alert("Halo! Saya Ardhitya Afif P — senang bisa berkenalan denganmu!");
+    });
+  </script>
+
+</body>
+</html>
